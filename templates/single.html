@@ -1,0 +1,29 @@
+<!-- wp:template-part {"slug":"header-inner","tagName":"header","align":"full","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"margin":{"top":"0px"},"blockGap":"0px"}},"layout":{"inherit":true}} --><main class="wp-block-group alignfull" style="margin-top:0px">
+
+	<!-- wp:template-part {"slug":"meta","align":"full"} /-->
+
+	<!-- wp:spacer {"height":"40px"} -->
+	<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:post-content {"align":"full","layout":{"inherit":true}} /-->
+
+	<!-- wp:spacer {"height":"40px"} -->
+	<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:template-part {"slug":"comments"} /-->
+
+	<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"purple","className":"has-link-color","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group alignfull has-link-color has-purple-background-color has-background">
+		<!-- wp:post-navigation-link {"textAlign":"left","type":"previous","showTitle":true} /-->
+		<!-- wp:post-navigation-link {"textAlign":"right","showTitle":true} /-->
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","align":"full","className":"site-footer"} /-->

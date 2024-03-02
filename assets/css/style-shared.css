@@ -1,0 +1,46 @@
+
+/* Adjust the background color for the cover block.
+Note that this is not the overlay color. */
+.is-style-oh-so-pink-half-cover,
+.is-style-oh-so-pink-half-cover-right {
+	background-color: #000;
+}
+
+.is-style-oh-so-pink-text-stroke,
+.is-style-oh-so-pink-text-stroke a {
+	color: transparent !important;
+	-webkit-text-stroke: 6px #000;
+}
+
+@media ( min-width: 600px ) {
+
+	.is-style-oh-so-pink-half-cover .wp-block-cover-image img.wp-block-cover__image-background,
+	.is-style-oh-so-pink-half-cover .wp-block-cover-image video.wp-block-cover__video-background,
+	.is-style-oh-so-pink-half-cover.wp-block-cover img.wp-block-cover__image-background,
+	.is-style-oh-so-pink-half-cover.wp-block-cover video.wp-block-cover__video-background {
+		width: 50% !important;
+		right: unset !important;
+	}
+
+	.is-style-oh-so-pink-half-cover-right .wp-block-cover-image img.wp-block-cover__image-background,
+	.is-style-oh-so-pink-half-cover-right .wp-block-cover-image video.wp-block-cover__video-background,
+	.is-style-oh-so-pink-half-cover-right.wp-block-cover img.wp-block-cover__image-background,
+	.is-style-oh-so-pink-half-cover-right.wp-block-cover video.wp-block-cover__video-background {
+		width: 50% !important;
+		left: unset !important;
+	}
+}
+
+@media ( max-width: 840px ) {
+
+	/* reset the right-aligned text on small screens. */
+	.post-meta .has-text-align-right,
+	.post-navigation-link-next.has-text-align-right {
+		text-align: left;
+	}
+
+	.wp-block-columns.post-meta.has-background,
+	.wp-block-columns.post-nav.has-background {
+		padding: 0;
+	}
+}

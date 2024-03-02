@@ -1,0 +1,42 @@
+/* Hide the current svg for the menu button: */
+.site-header .wp-block-navigation__responsive-container-open svg,
+.site-header .wp-block-navigation__responsive-container-close svg {
+	display: none;
+}
+
+/* Add the new icon for the menu button: */
+.site-header .wp-block-navigation__responsive-container-open,
+.site-header .wp-block-navigation__responsive-container-close {
+	background-image: url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="72" height="72" aria-hidden="true" focusable="false"><path d="M10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7zm1-11H9v3H6v2h3v3h2v-3h3V9h-3V6zM10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7zm1-11H9v3H6v2h3v3h2v-3h3V9h-3V6z"></path></svg>' );
+	width: 64px;
+	height: 64px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Rotate the close button 45 degrees: */
+.site-header .wp-block-navigation__responsive-container-close {
+	transform: rotate(45deg);
+	padding-top: 1px;
+}
+
+/* Make it visible in the editor*/
+.components-button.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open {
+	height: 64px;
+}
+
+.site-header .has-neon-pink-dark-purple-split-top-background-color {
+	background: var(--wp--preset--gradient--neon-pink-dark-purple-split-top) !important;
+}
+
+.has-modal-open .wp-block-navigation__responsive-close {
+	max-width: 100%;
+	padding: 20px 20px;
+}
+
+.has-modal-open .wp-block-navigation__responsive-close ul,
+.has-modal-open .wp-block-navigation__responsive-close form {
+	max-width: var(--wp--style--global--wide-size, 100%);
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -1,0 +1,95 @@
+/*
+Theme Name: Oh So Pink
+Author: Carolina Nymark
+Author URI: https://fullsiteediting.com
+Theme URI:
+Version: 1.0.0
+Description: An experimental full site editing theme. Note that this theme requires some setup to work, including creating a page for the full page menu. See the setup help page.
+Tags: full-site-editing, blog, one-column, two-columns, editor-style, block-styles
+Text Domain: oh-so-pink
+Requires at least: 6.0
+Requires PHP: 7.4
+Tested up to: 6.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+/* Make sure that full width blocks are full width, reset the browser margins. */
+body {
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Elements */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+textarea {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+.wp-site-blocks a {
+	text-underline-offset: 2px;
+}
+
+/* Adjust underlines to improve accessibility. This is a temporary solution.*/
+.wp-site-blocks a:hover {
+	text-decoration: none;
+}
+
+/* Comments */
+.commentlist,
+.children {
+	list-style: none;
+}
+
+.comment-meta .says,
+.home .comment-area {
+	display: none; /* Hide single page comment area on the home page */
+}
+
+/* Prevent long titles from overflowing */
+.wp-site-blocks h2.wp-block-post-title {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Override the display: inline-block that is set by the the block editor, as it is 
+causing long titles with links to overflow. */
+.wp-site-blocks h2.wp-block-post-title a {
+	display: initial;
+}
+
+/*
+ * Increase padding on smaller screens. 
+ * Temporary solution to avoid text content running up to the edge of the browser window,
+ * making the text difficult to read.
+*/
+@media ( max-width: 840px ) {
+	main > :not(.alignfull),
+	main .entry-content > :not(.alignfull):not(ul):not(ol),
+	main .wp-block-query > :not(.alignfull),
+	main .entry-content .wp-block-columns.alignfull p {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
